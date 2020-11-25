@@ -1,0 +1,48 @@
+# fb automation using selenium
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome('chromedriver.exe') # using chrome browser
+driver.get('https://www.facebook.com/') # enetring the URL of fb
+driver.maximize_window() # maximizing the chrome window
+
+time.sleep(1) # time delay
+
+# login
+driver.find_element_by_id('email').send_keys('raviranjansingh2cool2funky@gmail.com') # gmail id
+driver.find_element_by_id('pass').send_keys('logic123') # password
+driver.find_element_by_id('loginbutton').click()
+
+#clicking on the timeline pic
+driver.find_element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[2]/div[4]/div[1]/div[4]/a/div[1]/div/svg/g/image').click()
+
+#clicking on the recent post
+driver.find.element_by_xpath("//*[@id="jsc_c_h4"]").click()
+
+#clicking on the options button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[2]/div[1]/div/div/div[4]/div[2]/div/div[2]/div[3]/div/div/div/div/div/div/div/div/div/div/div[2]/div/div[2]/div/div[3]/div').click()
+
+#clicking on the edit button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div[2]/div[2]/div/div/span').click()
+
+#clicking on the emoji options button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div[2]/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div/div/div/div').click()
+
+#clicking on the emoji 
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/span/div/div/div/div/div/i').click()
+
+#clicking on the save button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[4]/div/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div/div/div[1]/div/div/div[1]/div/div/div/div/div[2]/div/div[4]/span[1]/div/img').click()
+
+#clicking on the options button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[4]/div/div/div[1]/div/div[2]/div/div/div/form/div/div[1]/div/div/div[3]/div[2]/div').click()
+
+#clicking on the delete option 
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[3]/div/div/div[2]/div/div/div[1]/div[1]/div/div/div[1]/div/div[1]/div/div[4]/div[3]').click()
+
+#clicking on the yes button
+driver.find.element_by_xpath('//*[@id="mount_0_0"]/div/div[1]/div[1]/div[4]/div/div/div[1]/div/div[2]/div/div/div/div[4]/div/div[1]/div[1]/div[1]/div/span/span').click()
+
+driver.current_url()
+print('Done')
+
